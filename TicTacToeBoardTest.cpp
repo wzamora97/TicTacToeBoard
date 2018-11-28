@@ -20,3 +20,25 @@ TEST(TicTacToeBoardTest, unitTestName)
 	ASSERT_TRUE(true);
 }
 */
+TEST( /* Test Class: */ TicTacToeBoardTest,
+      /* Test Case name: */ isXTurns)
+{
+	TicTacToeBoard obj;
+	Piece myPiece =  obj.toggleTurn(); 
+	ASSERT_EQ(myPiece, X);
+}
+TEST( /* Test Class: */ TicTacToeBoardTest,
+      /* Test Case name: */ isOTurns)
+{
+	TicTacToeBoard obj;
+	Piece myPiece =  obj.toggleTurn(); 
+	ASSERT_EQ(myPiece, O);
+}
+TEST( /* Test Class: */ TicTacToeBoardTest,
+      /* Test Case name: */ noOnesTurns)
+{
+	TicTacToeBoard obj;
+	Piece myPiece =  obj.toggleTurn(); 
+	ASSERT_EQ(myPiece, Invalid);
+}
+
