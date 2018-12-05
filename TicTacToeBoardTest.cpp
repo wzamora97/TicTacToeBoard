@@ -41,4 +41,25 @@ TEST( /* Test Class: */ TicTacToeBoardTest,
 	Piece myPiece =  obj.toggleTurn(); 
 	ASSERT_EQ(myPiece, Invalid);
 }
+TEST( /* Test Class: */ TicTacToeBoardTest,
+      /* Test Case name: */ xWins)
+{
+	TicTacToeBoard obj;
+	obj.placePiece(0,0);
+	obj.placePiece(0,1);
+	obj.placePiece(0,2);
+	Piece myPiece =  obj.getWinner(); 
+	ASSERT_EQ(myPiece, X);
+}
+TEST( /* Test Class: */ TicTacToeBoardTest,
+      /* Test Case name: */ oWins)
+{
+	TicTacToeBoard obj;
+	obj.toggleTurn();
+	obj.placePiece(0,0);
+	obj.placePiece(0,1);
+	obj.placePiece(0,2);
+	Piece myPiece =  obj.getWinner(); 
+	ASSERT_EQ(myPiece, X);
+}
 
